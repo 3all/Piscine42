@@ -1,0 +1,9 @@
+#!/bin/bash
+while true
+do
+    for num in {0..99999}
+    do
+        ./map_generator.pl $(((RANDOM%100)+1)) $(((RANDOM%100)+1)) $(((RANDOM%100)+1)) > "map${num}.txt"
+        sleep 1
+    done
+done
